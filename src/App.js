@@ -1,9 +1,18 @@
 import React from "react";
-import Main from "./components/login/main";
+import {BrowserRouter as Router} from "react-router-dom";
+import {HomeGridView} from './components/home/homeGrid/homeGridView'
+import Header from './components/home/header/header'
+import Login from "./components/login/main";
 function App() {
 
     return (
-      <Main></Main>
+        <>
+            {/*<Login></Login>*/}
+            <Router>
+                <Header/>
+            </Router>
+            <HomeGridView/>
+        </>
     );
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/login/main.scss";
+import "./main.scss";
 import { Login, Register } from "./index";
 
 class Main extends React.Component {
