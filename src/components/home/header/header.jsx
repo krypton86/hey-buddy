@@ -31,8 +31,8 @@ const headersData = [
         href: "/mentors",
     },
     {
-        label: "My Account",
-        href: "/account",
+        label: "Home",
+        href: "/",
     },
     {
         label: "Log Out",
