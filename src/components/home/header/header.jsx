@@ -40,7 +40,7 @@ const headersData = [
     },
 ];
 
-export default function Header() {
+export default function Header({removeToken}) {
     const { header ,menuButton,toolbar} = useStyles();
     const displayDesktop = () => {
         return (
@@ -58,6 +58,21 @@ export default function Header() {
 
     const getMenuButtons = () => {
         return headersData.map(({ label, href }) => {
+            if(label == "Log Out"){
+                return (
+                    <Button
+                        {...{
+                            key: label,
+                            color: "inherit",
+                            component: RouterLink,
+                            className: menuButton,
+                            onClick: removeToken
+                        }}
+                    >
+                        {label}
+                    </Button>
+                );
+            }
             return (
                 <Button
                     {...{

@@ -23,8 +23,8 @@
       "postId": 1
     }
   ],
-  "profile": {
-    "name": "typicode"
+  "token": {
+    "token": "test123"
   },
   "event": [
     {
@@ -46,56 +46,6 @@
       "id": 4,
       "name": "Cricket Play",
       "type": "Sport"
-    },
-    {
-      "name": "Vedant ",
-      "type": "Cause",
-      "id": 5
-    },
-    {
-      "name": "NOTIFICATION",
-      "type": "Cause",
-      "id": 6
-    },
-    {
-      "name": "ATTRIBUTES_TYPES_MAP",
-      "type": "Sport",
-      "id": 7
-    },
-    {
-      "name": "RECIPIENTS",
-      "type": "Cause",
-      "id": 8
-    },
-    {
-      "name": "Car",
-      "type": "Cause",
-      "id": 10
-    },
-    {
-      "name": "jk",
-      "type": "Sport",
-      "id": 11
-    },
-    {
-      "name": "Footbal",
-      "type": "",
-      "id": 12
-    },
-    {
-      "name": "",
-      "type": "Cause",
-      "id": 13
-    },
-    {
-      "name": "gh",
-      "type": "Adventure",
-      "id": 14
-    },
-    {
-      "name": "Carpp",
-      "type": "Sport",
-      "id": 15
     }
   ]
 }

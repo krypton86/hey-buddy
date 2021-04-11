@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import {HomeGridView} from './components/home/homeGrid/homeGridView'
 import Header from './components/home/header/header'
@@ -10,14 +10,17 @@ import Birthday from "./components/home/birthday/birthday";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import CreateEvent from "./components/home/event/createEvent";
 import DetailedEventView from "./components/home/event/detailedEvent/detailedEventView";
+import useToken from './components/login/useToken';
 
 function App() {
-
+    const {removeToken, token, setToken } = useToken();
+    if (!token) {
+        return <Login setToken={setToken}/>
+    }
     return (
         <>
-            {/*<Login></Login>*/}
             <Router>
-                <Header/>
+                <Header removeToken={removeToken}/>
                 <Switch>
                     <Route exact path="/" component={HomeGridView}/>
                     <Route exact path="/about" component={About}/>
@@ -25,7 +28,7 @@ function App() {
                     <Route exact path="/event/create" component={CreateEvent}/>
                     <Route exact path="/event/:id" component={DetailedEventView}/>
                     <Route exact path="/birthday" component={Birthday}/>
-                    <Route  component={PageNotFound}/>
+                    <Route component={PageNotFound}/>
                 </Switch>
             </Router>
         </>
