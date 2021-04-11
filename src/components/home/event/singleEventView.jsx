@@ -38,10 +38,12 @@ const SingleEventView = ({data}) => {
     const classes = useStyles();
     return (
         <Grid item xs={4}>
-            <div className={`${classes.paper}`}>
-                <img src={imageMapper(data.type)} alt="my image" className={"single-event-view-logo"}/>
-                <h4>{data.name}</h4>
-            </div>
+            <Link exact to={`/event/${data.id}`}>
+                <div className={`${classes.paper}`}>
+                    <img src={imageMapper(data.type)} alt="my image" className={"single-event-view-logo"}/>
+                    <h4>{data.name}</h4>
+                </div>
+            </Link>
         </Grid>
     )
 }
